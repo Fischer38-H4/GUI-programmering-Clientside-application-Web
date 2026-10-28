@@ -4,9 +4,10 @@ export const events = [
     title: 'Introduction to JavaScript',
     kategori: 'Programming',
     date: '2023-07-15',
-    beskrivelse: 'lær det grundlæggende i JavaScript, et populært programmeringssprog til webudvikling.',
+    beskrivelse:
+      'lær det grundlæggende i JavaScript, et populært programmeringssprog til webudvikling.',
     sted: 'Aarhus',
-    underviser: 'John Doe'
+    underviser: 'John Doe',
   },
   {
     id: 2,
@@ -15,7 +16,7 @@ export const events = [
     date: '2023-08-10',
     beskrivelse: 'Opdag avancerede CSS-teknikker til at skabe smukke og responsive webdesigns.',
     sted: 'Copenhagen',
-    underviser: 'Jane Smith'
+    underviser: 'Jane Smith',
   },
   {
     id: 3,
@@ -24,16 +25,17 @@ export const events = [
     date: '2023-09-05',
     beskrivelse: 'Lær hvordan man bruger Python til dataanalyse og maskinlæring.',
     sted: 'Odense',
-    underviser: 'Alice Johnson'
+    underviser: 'Alice Johnson',
   },
   {
     id: 4,
     title: 'Machine Learning Basics',
     kategori: 'Artificial Intelligence',
     date: '2023-10-20',
-    beskrivelse: 'Få en introduktion til maskinlæring og dens anvendelser i forskellige industrier.',
+    beskrivelse:
+      'Få en introduktion til maskinlæring og dens anvendelser i forskellige industrier.',
     sted: 'Aalborg',
-    underviser: 'Bob Brown'
+    underviser: 'Bob Brown',
   },
   {
     id: 5,
@@ -42,7 +44,7 @@ export const events = [
     date: '2023-11-15',
     beskrivelse: 'Deltag i et intensivt bootcamp for at lære webudvikling fra bunden.',
     sted: 'Copenhagen',
-    underviser: 'Charlie Davis'
+    underviser: 'Charlie Davis',
   },
   {
     id: 6,
@@ -51,42 +53,46 @@ export const events = [
     date: '2023-12-05',
     beskrivelse: 'Lær de grundlæggende principper for brugergrænseflade og brugeroplevelsesdesign.',
     sted: 'Aarhus',
-    underviser: 'Diana Evans'
+    underviser: 'Diana Evans',
   },
   {
     id: 7,
     title: 'Cloud Computing Essentials',
     kategori: 'Cloud Computing',
     date: '2024-01-10',
-    beskrivelse: 'Få en forståelse af cloud computing og hvordan man implementerer det i virksomheder.',
+    beskrivelse:
+      'Få en forståelse af cloud computing og hvordan man implementerer det i virksomheder.',
     sted: 'Odense',
-    underviser: 'Ethan Foster'
+    underviser: 'Ethan Foster',
   },
   {
     id: 8,
     title: 'Cybersecurity Fundamentals',
     kategori: 'Security',
     date: '2024-02-20',
-    beskrivelse: 'Lær de grundlæggende principper for cybersikkerhed og hvordan man beskytter digitale aktiver.',
+    beskrivelse:
+      'Lær de grundlæggende principper for cybersikkerhed og hvordan man beskytter digitale aktiver.',
     sted: 'Aalborg',
-    underviser: 'Fiona Green'
+    underviser: 'Fiona Green',
   },
   {
     id: 9,
     title: 'Mobile App Development with React Native',
     kategori: 'Programming',
     date: '2024-03-15',
-    beskrivelse: 'Lær hvordan man udvikler mobile applikationer ved hjælp af React Native frameworket.',
+    beskrivelse:
+      'Lær hvordan man udvikler mobile applikationer ved hjælp af React Native frameworket.',
     sted: 'Copenhagen',
-    underviser: 'George Harris'
+    underviser: 'George Harris',
   },
   {
     id: 10,
     title: 'Big Data Analytics',
     kategori: 'Data Science',
     date: '2024-04-10',
-    beskrivelse: 'Opdag teknikker og værktøjer til at analysere store datamængder og udtrække værdifuld indsigt.',
+    beskrivelse:
+      'Opdag teknikker og værktøjer til at analysere store datamængder og udtrække værdifuld indsigt.',
     sted: 'Aarhus',
-    underviser: 'Hannah Johnson'
-  }
-];
+    underviser: 'Hannah Johnson',
+  },
+]

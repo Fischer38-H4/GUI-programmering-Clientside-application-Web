@@ -1,12 +1,12 @@
 <script setup>
-  import EventCard from "@/components/EventCard.vue";
+import EventCard from '@/components/EventCard.vue'
 
-  defineProps({
-    events: {
-      type: Array,
-      required: true
-    },
-  })
+defineProps({
+  events: {
+    type: Array,
+    required: true,
+  },
+})
 </script>
 
 <template>
@@ -18,6 +18,4 @@
   </ul>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
