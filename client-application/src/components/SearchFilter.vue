@@ -6,9 +6,18 @@ const searchQuery = defineModel()
 const kategorierQuery = defineModel('kategorier', { default: '' })
 const props = defineProps({
   dataList: Array,
+  categories: {
+    type: Array,
+    default: () => [],
+  },
 })
 
-const kategorierList = computed(() => [...new Set(props.dataList.map((item) => item.kategori))])
+const kategorierList = computed(
+  () =>
+    props.categories.length
+      ? props.categories
+      : [...new Set(props.dataList.map((item) => item.kategori))],
+)
 
 const filterEvents = computed(() => {
   const search = searchQuery.value.toLowerCase().trim()
