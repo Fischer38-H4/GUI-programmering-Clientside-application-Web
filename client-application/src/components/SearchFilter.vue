@@ -1,11 +1,14 @@
 <script setup>
 import { watch, computed } from 'vue'
 
-const emit = defineEmits(['update:search', 'update:category', 'filterEvents'])
+const emit = defineEmits(['filterEvents'])
 const searchQuery = defineModel()
 const kategorierQuery = defineModel('kategorier', { default: '' })
 const props = defineProps({
-  dataList: Array,
+  dataList: {
+    type: Array,
+    required: true,
+  },
   categories: {
     type: Array,
     default: () => [],

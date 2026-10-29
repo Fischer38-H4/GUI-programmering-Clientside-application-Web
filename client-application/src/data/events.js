@@ -100,8 +100,9 @@ export const events = [
     title: 'Advanced CSS Techniques',
     kategori: 'Cloud Computing',
     date: '2024-04-10',
-    beskrivelse: 'Opdag teknikker og værktøjer til at analysere store datamængder og udtrække værdifuld indsigt.',
+    beskrivelse:
+      'Opdag teknikker og værktøjer til at analysere store datamængder og udtrække værdifuld indsigt.',
     sted: 'Aarhus',
-    underviser: 'Alice Johnson'
-  }
+    underviser: 'Alice Johnson',
+  },
 ]

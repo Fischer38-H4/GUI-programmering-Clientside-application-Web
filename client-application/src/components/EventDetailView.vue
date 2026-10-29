@@ -1,6 +1,8 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
+import { events as dummyEvents } from '@/data/events.js'
+import { USE_DUMMY_DATA } from '@/dataSource.js'
 
 const route = useRoute()
 const event = ref(null)
@@ -15,6 +17,11 @@ async function fetchEvent() {
   event.value = null
 
   try {
+    if (USE_DUMMY_DATA) {
+      event.value = dummyEvents.find((item) => item.id === Number(route.params.id)) ?? null
+      return
+    }
+
     const response = await fetch(
       `https://jsonplaceholder.typicode.com/posts/${Number(route.params.id)}`,
     )

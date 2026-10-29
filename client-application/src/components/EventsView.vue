@@ -1,17 +1,17 @@
 <script setup>
 import { computed, onMounted, ref, watch } from 'vue'
 import { events as dummyEvents } from '@/data/events.js'
+import { USE_DUMMY_DATA } from '@/dataSource.js'
 import EventList from '@/components/EventList.vue'
 import SearchFilter from '@/components/SearchFilter.vue'
 import CreateEventModal from '@/components/CreateEventModal.vue'
 
-const useApi = false // Set to false to use local dummy data during development.
 const searchQuery = ref('')
 const kategorierQuery = ref('')
 const filterEvent = ref([])
 const eventData = ref([])
 const availableCategories = computed(() => {
-  const allEvents = useApi ? eventData.value : [...dummyEvents, ...eventData.value]
+  const allEvents = USE_DUMMY_DATA ? [...dummyEvents, ...eventData.value] : eventData.value
   return [...new Set(allEvents.map((event) => event.kategori))]
 })
 const isLoadingEvents = ref(false)
@@ -38,7 +38,7 @@ async function fetchEvents(page = currentPage.value) {
   eventsError.value = ''
 
   try {
-    if (!useApi) {
+    if (USE_DUMMY_DATA) {
       totalEvents.value = dummyEvents.length
       eventData.value = dummyEvents.slice((page - 1) * pageSize, page * pageSize)
       return
