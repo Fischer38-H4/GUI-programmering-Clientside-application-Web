@@ -13,14 +13,14 @@ const event = computed(() => events.find((item) => item.id === Number(route.para
 
     <section v-if="event" class="event-detail">
       <h1>{{ event.title }}</h1>
-      <p>{{ event.beskrivelse }}</p>
+      <p v-if="event.beskrivelse">{{ event.beskrivelse }}</p>
 
       <dl>
         <div>
           <dt>Dato</dt>
           <dd>{{ event.date }}</dd>
         </div>
-        <div>
+        <div v-if="event.sted">
           <dt>Sted</dt>
           <dd>{{ event.sted }}</dd>
         </div>
@@ -28,7 +28,7 @@ const event = computed(() => events.find((item) => item.id === Number(route.para
           <dt>Kategori</dt>
           <dd>{{ event.kategori }}</dd>
         </div>
-        <div>
+        <div v-if="event.underviser">
           <dt>Underviser</dt>
           <dd>{{ event.underviser }}</dd>
         </div>

@@ -1,20 +1,14 @@
 <script setup>
-import {ref, watch, computed} from "vue";
+import { watch, computed } from 'vue'
 
-const emit = defineEmits(['update:search','update:category','filterEvents'])
+const emit = defineEmits(['update:search', 'update:category', 'filterEvents'])
 const searchQuery = defineModel()
-const kategorierQuery = defineModel('kategorier', { default: ''})
+const kategorierQuery = defineModel('kategorier', { default: '' })
 const props = defineProps({
   dataList: Array,
 })
 
-const kategorierList = ref([])
-
-for (const item of props.dataList) {
-  if (!kategorierList.value.includes(item.kategori)) {
-    kategorierList.value.push(item.kategori)
-  }
-}
+const kategorierList = computed(() => [...new Set(props.dataList.map((item) => item.kategori))])
 
 const filterEvents = computed(() => {
   const search = searchQuery.value.toLowerCase().trim()
@@ -29,7 +23,7 @@ const filterEvents = computed(() => {
   })
 })
 
-watch(filterEvents, nyt => emit('filterEvents', nyt), { immediate: true })
+watch(filterEvents, (nyt) => emit('filterEvents', nyt), { immediate: true })
 </script>
 
 <template>

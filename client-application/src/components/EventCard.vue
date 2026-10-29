@@ -17,9 +17,9 @@ defineProps({
   >
     <article>
       <h3>{{ event.title }}</h3>
-      <p>{{ event.sted }} · {{ event.date }}</p>
-      <p>{{ event.beskrivelse }}</p>
-      <p>{{ event.underviser }} · {{event.kategori}}</p>
+      <p>{{ event.sted ? `${event.sted} · ` : '' }}{{ event.date }}</p>
+      <p v-if="event.beskrivelse">{{ event.beskrivelse }}</p>
+      <p>{{ event.underviser ? `${event.underviser} · ` : '' }}{{ event.kategori }}</p>
     </article>
   </RouterLink>
 </template>
