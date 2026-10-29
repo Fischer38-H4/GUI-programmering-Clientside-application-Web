@@ -1,5 +1,4 @@
 <script setup>
-
 import {ref, watch, computed} from "vue";
 
 const emit = defineEmits(['update:search','update:category','filterEvents'])
